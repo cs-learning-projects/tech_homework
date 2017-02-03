@@ -107,7 +107,11 @@ def handle_error():
 
 list1 = [1, 5, 7, 9]
 print(do_work(list1, handle_success, handle_error))
+
+list2 = [7, 9, 1, 8]
+print(do_work(list2, handle_success, handle_error))
+
 # выдает TypeError: '<' not supported between instances of 'str' and 'int'
 # почему не срабатывает else в данном случае??
-list2 = [1, 5, 7, 9, 'str']
+list2 = [7, 9, 1, 8, 'str']
 print(do_work(list2, handle_success, handle_error))
