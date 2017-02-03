@@ -2,26 +2,21 @@
 # Написать функцию, которая выбрасывает одно из трех исключений:ValueError, 
 # TypeError или RuntimeError случайным образом. В месте вызова функции обрабатывать все три исключения
 
-# TypeError: This is TypeError??? и как с этим бороться?
+import random
 
-# вариант 1
 def raise_exception():
-	random_exception = random.choice(['value', 'type', 'runtime'])
-	if random_exception == 'value':
-		raise ValueError('This is ValueError')
-	elif random_exception == 'type':
-		raise TypeError('This is TypeError')
-	else:
-		raise RuntimeError('This is RuntimeError')
+    exception_list = ['ValueError', 'TypeError', 'RuntimeError']
+    return random.choice(exception_list)
+    
+try:
+    raise raise_exception()
+except ValueError:
+    print('This is ValueError')
+except TypeError:
+    print('This is TypeError')
+except RuntimeError:
+    print('This is RuntimeError')
 
-
-raise_exception()
-
-# вариант 2
-import random 
-exception_list = [ValueError, TypeError, RuntimeError]
-
-print(random.choice(exception_list))
 
 #2. ------------------------------------------------------------------------------------------------------------------------
 #Написать функцию, которая принимает на вход список, 
