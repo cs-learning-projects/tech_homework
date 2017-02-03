@@ -25,6 +25,7 @@ raise_exception()
 # а тут нам не важно value, но если тип не int, то должно срабатывать исключение.
 # Или я что-то не поняла...?
 
+# вариант 1
 def sort_function(*args):
     try:        
         print(sorted(args))
@@ -35,6 +36,16 @@ def sort_function(*args):
 sort_function(10, 5, 3, 'str')
 sort_function(10, 5, 3)
 
+# вариант 2
+def sort_function(*args):
+    try:        
+        print(sorted(args))
+    except TypeError: 
+        raise ValueError('Non-numeric data found in the list.')
+
+       
+sort_function(10, 5, 3, 'str')
+sort_function(10, 5, 3)
 #3. ------------------------------------------------------------------------------------------------------------------------
 # Написать функцию, которая принимает словарь, преобразует все ключи словаря к строкам и возвращает новый словарь
 
