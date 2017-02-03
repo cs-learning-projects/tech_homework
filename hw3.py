@@ -4,12 +4,12 @@
 
 import random
 
-def raise_exception():
+def random_exception():
     exception_list = ['ValueError', 'TypeError', 'RuntimeError']
     return random.choice(exception_list)
     
 try:
-    raise raise_exception()
+    raise random_exception()
 except ValueError:
     print('This is ValueError')
 except TypeError:
