@@ -39,31 +39,27 @@ sort_function(10, 5, 3)
 # Написать функцию, которая принимает словарь, преобразует все ключи словаря к строкам и возвращает новый словарь
 
 # вариант 1
-# Выдает TypeError: update expected at most 1 arguments, got 2 - не знаю как поправить
+
 def key_to_string(my_dict):    
     output_dict = {}
     for key,value in my_dict.items():
-        if type(key) != int():
-            output_dict.update((type(key)), value)
-        else:
-            output_dict.update(key, value)
+        output_dict.update({str(key): value})
     return output_dict
 
 input_dict = {'key1': 1, 2: 'two'}
 print(key_to_string(input_dict))
 
 # вариант 2
-# Выдает SyntaxError: keyword can't be an expression (<string>, line 9). Не могу понять, как правильно передать словарь в функцию?
+# TypeError: key_to_string2() takes 0 positional arguments but 1 was given
 
 def key_to_string2(**kwargs):
 	output_dict = {}
 	for key, value in kwargs.items():
-		if type(key) != str:
-			key = str(key)
-		output_dict.update(key,value)
+	    output_dict[key] = str(key)
 	return output_dict
-    
-print(key_to_string2(1='one', '2'='two'))
+
+input_dict2 = {'key1': 1, 2: 'two'}
+print(key_to_string2(input_dict2))
 
 # 4. ------------------------------------------------------------------------------------------------------------------------
 # Написать функцию, которая принимает список чисел и возвращает их произведение
