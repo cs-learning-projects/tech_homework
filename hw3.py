@@ -18,19 +18,10 @@ def raise_exception():
 raise_exception()
 
 # вариант 2
-import random
+import random 
+exception_list = [ValueError, TypeError, RuntimeError]
 
-def raise_exception():
-	return random.choice([ValueError('This is ValueError'), TypeError('TypeError'), RuntimeError('RuntimeError')])
-	
-try:
-    raise_exception()
-except ValueError:
-    print('This is ValueError')
-except TypeError:
-    print('This is TypeError')
-except RuntimeError:
-    print('This is RuntimeError')
+print(random.choice(exception_list))
 
 #2. ------------------------------------------------------------------------------------------------------------------------
 #Написать функцию, которая принимает на вход список, 
