@@ -25,8 +25,12 @@ def raise_exception():
 	
 try:
     raise_exception()
-except (ValueError, TypeError, RuntimeError) as e:
-    print('{} is raised'.format(e))
+except ValueError:
+    print('This is ValueError')
+except TypeError:
+    print('This is TypeError')
+except RuntimeError:
+    print('This is RuntimeError')
 
 #2. ------------------------------------------------------------------------------------------------------------------------
 #Написать функцию, которая принимает на вход список, 
