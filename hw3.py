@@ -4,6 +4,7 @@
 
 # TypeError: This is TypeError??? и как с этим бороться?
 
+# вариант 1
 def raise_exception():
 	random_exception = random.choice(['value', 'type', 'runtime'])
 	if random_exception == 'value':
@@ -15,6 +16,17 @@ def raise_exception():
 
 
 raise_exception()
+
+# вариант 2
+import random
+
+def raise_exception():
+	return random.choice([ValueError('This is ValueError'), TypeError('TypeError'), RuntimeError('RuntimeError')])
+	
+try:
+    raise_exception()
+except (ValueError, TypeError, RuntimeError) as e:
+    print('{} is raised'.format(e))
 
 #2. ------------------------------------------------------------------------------------------------------------------------
 #Написать функцию, которая принимает на вход список, 
@@ -61,16 +73,16 @@ input_dict = {'key1': 1, 2: 'two'}
 print(key_to_string(input_dict))
 
 # вариант 2
-# TypeError: key_to_string2() takes 0 positional arguments but 1 was given
+# переводит все str ключи в int ключи. Как все-таки передать ключ в виде int
 
 def key_to_string2(**kwargs):
 	output_dict = {}
 	for key, value in kwargs.items():
-	    output_dict[key] = str(key)
+	    output_dict[int(key)] = value
 	return output_dict
 
-input_dict2 = {'key1': 1, 2: 'two'}
-print(key_to_string2(input_dict2))
+input_dict2 = {'1': 'one', '2': 'two'}
+print(key_to_string2(**input_dict2))
 
 # 4. ------------------------------------------------------------------------------------------------------------------------
 # Написать функцию, которая принимает список чисел и возвращает их произведение
