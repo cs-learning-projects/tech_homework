@@ -46,14 +46,14 @@ class Product_by_volume(Abstract_product):
         self.volume = volume
     
 # данные для проврки работы программы
-w1 = Product_by_weight('meat', 4, 2.2)
+w1 = Product_by_weight('meat', 200, 2.7)
 purchase_w1 = Purchase_price_total()
 purchase_w1.product_price_calc(w1.name, w1.price, w1.weight, w1.volume_descripton)
 
-u1 = Product_by_unit('chips', 2, 2)
+u1 = Product_by_unit('chips', 55, 2)
 purchase_u1 = Purchase_price_total()
 purchase_u1.product_price_calc(u1.name, u1.price, u1.unit, u1.volume_descripton)
 
-v1 = Product_by_volume('pepsi', 1, 3)
+v1 = Product_by_volume('pepsi', 45, 3)
 purchase_u1 = Purchase_price_total()
 purchase_u1.product_price_calc(v1.name, v1.price, v1.volume, v1.volume_descripton)
