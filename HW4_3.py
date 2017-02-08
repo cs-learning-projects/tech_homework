@@ -10,17 +10,14 @@ class Human(object):
 
 class Animal(object):
 	dangerous_animal = True
-
 	def __init__(self, name):
 		self.name = name
-
 	def is_dangerous(self, dangerous):
 		if self.dangerous_animal == True:
 			print(self.name, 'is dangerous animal')
 		else:
 			print(self.name, 'is not dangerous animal')
 		return
-
 
 
 class Lion(Animal):
