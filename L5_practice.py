@@ -31,7 +31,7 @@ class Product_by_volume(Abstract_product):
     #    self.volume = volume
     pass
 
-w1 = Product_by_weight('meat', 2, 200)
+w1 = Product_by_weight('meat', 200, 2)
 print(w1.name, w1.weight, w1.price)
 c = Purchase_price_total()
 c.product_price_calc(w1.name, w1.price, w1.weight)
