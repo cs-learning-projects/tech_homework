@@ -15,9 +15,9 @@ class Person(object):
 		
 	def is_known(self, person, friend_list):
 		if person in friend_list:
-				print(self.name, ' is friend of ', person)
+			print(self.name, ' is friend of ', person)
 		else:
-				print(self.name, ' and ', person, ' isnt friends')
+			print(self.name, ' and ', person, ' isnt friends')
 		return		
 
 
