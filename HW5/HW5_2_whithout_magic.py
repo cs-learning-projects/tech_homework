@@ -1,5 +1,3 @@
-
-
 class IntToStr(object):
 
     def __init__(self, value):
@@ -28,8 +26,8 @@ print(n1.sum_function(n1.value, input_str1))
 input_str2 = 'z'
 print(n1.sum_function(n1.value, input_str2))
 
-input_list = [1, 2, 3]
-print(n1.sum_function(n1.value, input_list))
+# input_list = [1, 2, 3]
+# print(n1.sum_function(n1.value, input_list))
 
 
 '''вариант2 функции sum_function - как исправить "During handling of the above
