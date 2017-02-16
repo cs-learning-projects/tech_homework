@@ -11,7 +11,7 @@ def write_to_file(data):
 
 def read_file_data(file_to_read):
 	contents_of_file = open('file_to_read', 'r')
-	print(contents_of_file.red())
+	print(contents_of_file.read())
 
 write_to_file('add some text to the file \n')
 write_to_file('add some additional text to the file \n')
