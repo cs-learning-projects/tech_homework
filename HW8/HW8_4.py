@@ -46,14 +46,13 @@ def post_data():
         if user_form.validate():
             # print('email:', request.form['email'])
             # print('pass:', request.form['password'])
-            status_check = jsonify(status_output[0])
-            return status_check
+            error_list = jsonify(status_output[0])
+
         else:
-            status_check = jsonify(status_output[1])
-            error_list = jsonify(user_form.errors)
+            # status_check = jsonify(status_output[1])
+            error_list = jsonify(status_output[1], user_form.errors)
             # print(user_form.errors)
-            return status_check and error_list
-    return 'Done!'
+    return error_list
 
 if __name__ == '__main__':
     app.run()
