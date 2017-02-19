@@ -23,7 +23,7 @@ app.config.update({
 
 def confirm_password(form, field):
     if form.data['password'] != form.data['confirm_password']:
-        raise ValidationError('Пароли не совпадают"')
+        raise ValidationError('Пароли не совпадают')
 
 
 class UserForm(FlaskForm):
